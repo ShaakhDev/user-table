@@ -1,4 +1,4 @@
-import Container from "./components/Container";
+import Container from "./components/auth/Container";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import LoginPage from './pages/LoginPage'
 import SignupPage from "./pages/SignupPage";
@@ -6,13 +6,13 @@ import PrivateRoute from "./components/PrivateRoute";
 import Home from "./pages/Home";
 
 function App() {
-
+  const isAuthenticated = !!window.localStorage.getItem('_token');
   return (
     <Container>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={
-            <PrivateRoute isAuth={true}>
+            <PrivateRoute isAuth={isAuthenticated}>
               <Home />
             </PrivateRoute>
           } />

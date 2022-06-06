@@ -45,6 +45,6 @@ export const sFields = [
         type: 'password',
         placeholder: 'Confirm Password',
         isRequired: true,
-        id: 'confirm password',
+        id: 'confirm_password',
     },
 ]
