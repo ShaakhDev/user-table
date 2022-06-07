@@ -1,8 +1,7 @@
 import React from 'react'
 
-function Home() {
+function Home(input, init) {
    const token = window.localStorage.getItem('_token')
-
    const handleClick = (e) => {
       e.preventDefault()
       const baseUrl = 'http://localhost:8080/api/v1/users/all';
@@ -10,9 +9,9 @@ function Home() {
       fetch(baseUrl, {
          method: 'GET',
          headers: {
-            "Content-Type": "application/json"
-         },
-         body: token
+            "Content-Type": "application/json",
+            "Authorization":`Bearer ${token}`
+         }
       }).then(res => res.json()).then(data => console.log(data)).catch(e => console.log(e))
    }
    return (
