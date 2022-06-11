@@ -4,12 +4,15 @@ specifiers:
   '@babel/core': '>=7.0.0-0 <8.0.0'
   '@babel/plugin-syntax-flow': ^7.14.5
   '@babel/plugin-transform-react-jsx': ^7.14.9
+  '@headlessui/react': ^1.6.4
+  '@heroicons/react': ^1.0.6
   autoprefixer: ^10.4.7
   postcss: ^8.4.14
   react: ^18.1.0
   react-dom: ^18.1.0
   react-router-dom: ^6.3.0
   react-scripts: 5.0.1
+  react-table: 7.8.0
   tailwindcss: ^3.0.24
   typescript: '>=3.2.1 <4.0.0 || >=4.0.0 <5.0.0'
 
@@ -17,10 +20,13 @@ dependencies:
   '@babel/core': 7.18.2
   '@babel/plugin-syntax-flow': 7.17.12_@babel+core@7.18.2
   '@babel/plugin-transform-react-jsx': 7.17.12_@babel+core@7.18.2
+  '@headlessui/react': 1.6.4_ef5jwxihqo6n7gxfmzogljlgcm
+  '@heroicons/react': 1.0.6_react@18.1.0
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
   react-router-dom: 6.3.0_ef5jwxihqo6n7gxfmzogljlgcm
   react-scripts: 5.0.1_6cxsg3zwk6ehndzbtigmasj4zu
+  react-table: 7.8.0_react@18.1.0
   typescript: 4.7.3
 
 devDependencies:
@@ -1561,6 +1567,25 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@headlessui/react/1.6.4_ef5jwxihqo6n7gxfmzogljlgcm:
+    resolution: {integrity: sha512-0yqz1scwbFtwljmbbKjXsSGl5ABEYNICVHZnMCWo0UtOZodo2Tpu94uOVgCRjRZ77l2WcTi2S0uidINDvG7lsA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
+    dependencies:
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+    dev: false
+
+  /@heroicons/react/1.0.6_react@18.1.0:
+    resolution: {integrity: sha512-JJCXydOFWMDpCP4q13iEplA503MQO3xLoZiKum+955ZCtHINWnx26CUxVxxFQu/uLb4LW3ge15ZpzIkXKkJ8oQ==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.1.0
     dev: false
 
   /@humanwhocodes/config-array/0.9.5:
@@ -7928,6 +7953,14 @@ packages:
       - webpack-cli
       - webpack-hot-middleware
       - webpack-plugin-serve
+    dev: false
+
+  /react-table/7.8.0_react@18.1.0:
+    resolution: {integrity: sha512-hNaz4ygkZO4bESeFfnfOft73iBUj8K5oKi1EcSHPAibEydfsX2MyU6Z8KCr3mv3C9Kqqh71U+DhZkFvibbnPbA==}
+    peerDependencies:
+      react: ^16.8.3 || ^17.0.0-0 || ^18.0.0
+    dependencies:
+      react: 18.1.0
     dev: false
 
   /react/18.1.0:

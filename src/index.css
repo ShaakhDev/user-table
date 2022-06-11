@@ -8,11 +8,33 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	width: 100vw;
+}
+html{
+	width: 100vw;
+	overflow-x: hidden;
 }
 
+*{
+	box-sizing: border-box;
+}
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
 }
 
+/*@media (max-width: 768px) {*/
+/*	.toolbar {*/
+/*		font-size: 55.5%;*/
+/*		justify-content: space-evenly;*/
+/*	}*/
+/*	.toolbar button{*/
+/*		width: 2rem;*/
+/*		height: 2rem;*/
+/*	}*/
+/*	.toolbar svg{*/
+/*		width: 1.2rem;*/
+/*		height: 1.2rem;*/
+/*	}*/
+/*}*/
 

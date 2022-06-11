@@ -4,7 +4,8 @@ import { Navigate } from 'react-router-dom'
 function PrivateRoute({ isAuth, children }) {
     return (
         <>
-            {isAuth ? children : <Navigate to="/login" replace={true} />}
+
+            {isAuth  ? children : <Navigate to="/login" replace={true} />}
         </>
     )
 }
