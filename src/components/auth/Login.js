@@ -27,15 +27,12 @@ function Login() {
 
    const handleSubmit = async (e) => {
       e.preventDefault();
-      // authenticateUser();
       const {username, email, password} = loginState;
-
       const bodyObj = JSON.stringify({
          user_name: username,
          user_password: password,
          user_email: email
       })
-
       const data = await LoginToAccount(bodyObj, setIsLoading, setNotification, navigate)
       console.log(data)
    }

@@ -9,7 +9,6 @@ export default function Header({
 }) {
     return (
         <div className="mb-10">
-
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
                 {heading}
             </h2>

@@ -13,7 +13,6 @@ function SignupPage() {
                 linkName="Login"
                 linkUrl="/login"
             />
-
             <Signup />
         </Container>
     )

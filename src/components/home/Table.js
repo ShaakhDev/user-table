@@ -1,4 +1,4 @@
-import {useEffect, useMemo} from 'react'
+import { useMemo} from 'react'
 import {useTable} from 'react-table';
 import {GetDate} from '../../lib/getDate'
 import {COLUMNS} from "./columns";
@@ -14,9 +14,6 @@ function Table(props) {
       data
    });
 
-
-
-
    const handleCheckByOne = e => {
       const {value} = e.target
       let index = checkedUsers.indexOf(value);
@@ -31,7 +28,6 @@ function Table(props) {
       props.callback(checkedUsers)
    }
 
-
    const handleCheckAll = (e) => {
       const {checked}=e.target
          if(checked){
@@ -44,7 +40,6 @@ function Table(props) {
             checkedUsers.length = 0;
             values.forEach(input=>input.checked=false)
          }
-
       props.callback(checkedUsers)
    }
 

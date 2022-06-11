@@ -2,7 +2,6 @@
 function FormAction({
     text,
     handleSubmit,
-
 }) {
     return (
         <>

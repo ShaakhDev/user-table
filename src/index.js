@@ -9,6 +9,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-//@babel/plugin-syntax-flow@^7.14.5
-// typescript@">=3.2.1 <4.0.0 || >=4.0.0 <5.0.0"
-//@babel/plugin-transform-react-jsx@^7.14.9

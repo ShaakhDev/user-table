@@ -1,4 +1,3 @@
-
 let BASE_URL = process.env.REACT_APP_BASE_URL;
 const token = localStorage.getItem('_token')
 const user_name = localStorage.getItem('_uid')
@@ -19,6 +18,38 @@ export const GetAllUsers = async (navigate) => {
    return data
 }
 
+export const CreateAccount = async (bodyObject, setIsLoading, setNotification, navigate) => {
+   setIsLoading(true)
+   const response = await fetch(BASE_URL + "/signup", {
+      method: 'POST',
+      headers: {
+         "Content-Type": "application/json",
+      },
+      body: bodyObject
+   });
+   const data = await response.json()
+
+   if (data.ok || data.status === 200) {
+      setIsLoading(false)
+      navigate('/login')
+   } else {
+      setIsLoading(false)
+      setNotification({
+         isActive: true,
+         message: data.message,
+         code: data.status
+      })
+      setTimeout(() => {
+         setNotification({
+            isActive: false,
+            message: '',
+            code: null
+         })
+      }, 3000);
+   }
+   return data
+}
+
 export const LoginToAccount = async (bodyObject, setIsLoading, setNotification, navigate) => {
    setIsLoading(true);
    const response = await fetch(BASE_URL + "/login", {
@@ -29,7 +60,6 @@ export const LoginToAccount = async (bodyObject, setIsLoading, setNotification, 
       body: bodyObject
    });
    const data = await response.json()
-   // LogOutOnBlocked(data);
    if (data.ok && data.status === 200) {
       localStorage.setItem("_token", data?.data?.token);
       localStorage.setItem('_uid', data?.data?.user.user_name);

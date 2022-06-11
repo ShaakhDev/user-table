@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom'
 import {BlockUser,UnblockUser,DeleteUser} from "../../lib/fetch";
 import Notification from "../Notification";
 
-function Toolbar({currentUser, checkedIds,refresh}) {
+function Toolbar({currentUser, checkedIds}) {
    const [notification, setNotification] = useState({
       isActive: false,
       message: '',
@@ -20,7 +20,6 @@ function Toolbar({currentUser, checkedIds,refresh}) {
             message: data.message,
             code: data.status
          })
-         // refresh(true)
          setTimeout(() => {
             setNotification({
                isActive: false,

@@ -7,7 +7,6 @@ function Input({
     isRequired,
     handleChange,
     value
-
 }) {
     return (
         <div className="mt-5">

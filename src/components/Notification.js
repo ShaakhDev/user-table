@@ -2,6 +2,7 @@ import React from 'react';
 
 function Notification({code, message,setNotification}) {
    const isError = code > 399;
+
    const handleClose = () => {
       setNotification({
          code: null,
@@ -9,6 +10,7 @@ function Notification({code, message,setNotification}) {
          isActive: false,
       })
    }
+
    return (
       <>
          <div

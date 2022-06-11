@@ -20,9 +20,3 @@ table th {
     background-color: #059669;
     color: white;
 }
-@media screen and (max-width: 600px) {
-    table {
-        overflow-x: scroll !important;
-    }
-
-}
