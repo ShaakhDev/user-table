@@ -31,7 +31,7 @@ export const CreateAccount = async (bodyObject, setIsLoading, setNotification, n
 
    if (data.ok || data.status === 200) {
       setIsLoading(false)
-      navigate('/login')
+     navigate('/login',{replace: true})
    } else {
       setIsLoading(false)
       setNotification({
@@ -65,7 +65,8 @@ export const LoginToAccount = async (bodyObject, setIsLoading, setNotification, 
       localStorage.setItem('_uid', data?.data?.user.user_name);
 
       setTimeout(() => {
-         navigate('/', {replace: true})
+         window.location.pathname= '/'
+         // navigate('/', {replace: true})
       }, 3000);
    } else if ( !data.ok) {
       setIsLoading(false);
@@ -140,7 +141,7 @@ export const DeleteUser = async (usersIds) => {
 }
 
 const LogOutOnBlocked = (data) => {
-   if ( !data.ok && data.message === 'User is blocked!') {
+   if ( !data.ok || data.message === 'User is blocked!') {
       localStorage.removeItem('_token');
       localStorage.removeItem('_uid');
       window.location.reload(false)
