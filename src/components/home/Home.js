@@ -15,7 +15,7 @@ function Home(props) {
          const data = await GetAllUsers(navigate)
          setUsers(data?.users)
       })()
-   }, [])
+   }, [users, navigate])
 
    return (
       <>
