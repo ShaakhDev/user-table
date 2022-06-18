@@ -6,7 +6,7 @@ import Table from "./Table";
 
 function Home(props) {
    const navigate = useNavigate()
-   const [fetched, setFetched] = useState(false)
+   const [fetched, setFetched] = useState(true)
    const [users, setUsers] = useState([]);
    const currentUser = window.localStorage.getItem('_uid')
    const [checkedIds, setCheckedIds] = useState([])
